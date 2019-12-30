@@ -1,0 +1,44 @@
+projectX - README
+
+This library is to accomadate programming, in particular to
+add a layer that facilitates the transition between AVS
+modules and standalone code.
+
+The makefiles assume that AVS is installed in /usr/avs.
+However AVS is _not_ required to compile the standalone
+library, despite the makefile requirements. An AVS-free
+makefile has yet to become part of the standard distribution,
+but direction are further below.
+
+see projectX_interface.h for an idea of it's content.
+
+HOWTO INSTALL (assuming AVS is installed in /usr/avs)
+
+1) get the files:
+	$ wget http://zaphod/svn/projectX/tags/projectX-*.*.tar.gz
+
+2) untar
+	$ tar xfz projectX.tar.gz
+
+2) change to the expanded directory
+	$ cd projectX
+
+3) compile the library
+	$ make
+
+4) install as root
+	$ sudo make install
+
+
+If you can't do the root thing just fix your makefiles appropriately.
+
+
+
+To compile the library when AVS is not availible change 3 and 4 of the
+above directions
+
+3) compile the library
+	$ make -f Makefile.standalone
+
+4) install as root
+	$ sudo make -f Makefile.standalone install

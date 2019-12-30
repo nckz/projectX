@@ -1,0 +1,8 @@
+#
+# file for the specific implementation libraries and flags for each platform
+#
+
+
+OPTIMIZATION_FLAGS = -O2 -pipe -fstrict-aliasing
+INCLUDE_EXTRA =
+

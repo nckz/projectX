@@ -1,0 +1,12 @@
+#
+# file for the specific implementation libraries and flags for each platform
+#
+
+# for Mac OSX
+#
+# NRZ
+# the -arch i386 flag is necessary for compiling projectX_a.a on an
+# intel-Mac for python extension modules.  This will obviously not
+# work for a PPC-Mac.
+OPTIMIZATION_FLAGS = -O2 
+INCLUDE_EXTRA = /usr/include/malloc
